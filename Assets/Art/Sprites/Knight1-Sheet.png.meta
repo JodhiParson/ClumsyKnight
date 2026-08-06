@@ -136,6 +136,7 @@ TextureImporter:
         y: 516
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -143,6 +144,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -182,6 +187,7 @@ TextureImporter:
         y: 516
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -189,6 +195,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -228,6 +238,7 @@ TextureImporter:
         y: 516
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -235,6 +246,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -274,6 +289,7 @@ TextureImporter:
         y: 516
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -281,6 +297,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -320,6 +340,7 @@ TextureImporter:
         y: 516
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -327,6 +348,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -364,6 +389,7 @@ TextureImporter:
         y: 344
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -371,6 +397,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -407,9 +437,10 @@ TextureImporter:
         height: 180
 =======
         x: 235
-        y: 344
+        y: 342
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -417,6 +448,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -456,6 +491,7 @@ TextureImporter:
         y: 344
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -463,6 +499,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -502,6 +542,7 @@ TextureImporter:
         y: 172
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -509,6 +550,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -548,6 +593,7 @@ TextureImporter:
         y: 172
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -555,6 +601,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -594,6 +644,7 @@ TextureImporter:
         y: 172
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -601,6 +652,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -637,9 +692,10 @@ TextureImporter:
         height: 180
 =======
         x: 705
-        y: 175
+        y: 172
         width: 235
         height: 172
+<<<<<<< HEAD
 >>>>>>> 56d6a24 (sprite sheet)
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -647,6 +703,10 @@ TextureImporter:
 >>>>>>> 282be95 (add knight sprite)
 =======
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -681,6 +741,7 @@ TextureImporter:
         y: 172
         width: 235
         height: 172
+<<<<<<< HEAD
       alignment: 0
 <<<<<<< HEAD
       pivot: {x: 0, y: 0}
@@ -688,6 +749,10 @@ TextureImporter:
 =======
       pivot: {x: 0.5, y: 0.5}
 >>>>>>> c93578f (save scene)
+=======
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> 6c3899c (save scene added attack animation to plug in real)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1073,8 +1138,8 @@ TextureImporter:
         y: 172
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1095,8 +1160,8 @@ TextureImporter:
         y: 172
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1117,8 +1182,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1139,8 +1204,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1161,8 +1226,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1183,8 +1248,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1205,8 +1270,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1227,8 +1292,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1249,8 +1314,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -1271,8 +1336,8 @@ TextureImporter:
         y: 0
         width: 235
         height: 172
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
