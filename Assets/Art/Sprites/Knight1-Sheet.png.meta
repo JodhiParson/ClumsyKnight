@@ -69,7 +69,11 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
+<<<<<<< HEAD
     maxTextureSize: 8192
+=======
+    maxTextureSize: 2048
+>>>>>>> 282be95 (add knight sprite)
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -93,6 +97,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD
+=======
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> 282be95 (add knight sprite)
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -101,19 +121,32 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+<<<<<<< HEAD
         y: 591
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 9057673f0a451644596b3fd8cee0f672
       internalID: -2143621480
+=======
+      spriteID: 0a6359a6048f1f84ab443b45528a3017
+      internalID: 422947255
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -122,20 +155,34 @@ TextureImporter:
       name: Knight1-Sheet_1
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 333
         y: 591
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 180
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 250eba9987d1f334989186082962155d
       internalID: -1628235179
+=======
+      spriteID: c9d1b3289ebc55e46a71297fbfb45089
+      internalID: -1350718144
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -144,20 +191,34 @@ TextureImporter:
       name: Knight1-Sheet_2
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 666
         y: 591
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 360
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: fc4f2a1493601ae458e496c0b357405d
       internalID: -101237840
+=======
+      spriteID: 53bc48f9341a3de41907d7d4eee3d253
+      internalID: -1055591439
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -166,20 +227,34 @@ TextureImporter:
       name: Knight1-Sheet_3
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 999
         y: 591
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 540
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: f576d65e87109804aac5b86be9f35e9d
       internalID: -1573948577
+=======
+      spriteID: 7267da271a2c01445973082889bae3ce
+      internalID: -800448061
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -188,20 +263,34 @@ TextureImporter:
       name: Knight1-Sheet_4
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 1332
         y: 591
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 720
+        y: 180
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 823b1424b42a27841bc0c198fbb8d484
       internalID: 1388568801
+=======
+      spriteID: 7f7f9e218378984478118e6b0195ed74
+      internalID: 1098247488
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -211,19 +300,32 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+<<<<<<< HEAD
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 7e6959492fe971c4bbff6a7f2809cf24
       internalID: -1195179212
+=======
+      spriteID: e0d955a7616e7a44b8c0373f373f0f3f
+      internalID: -990374308
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -232,20 +334,34 @@ TextureImporter:
       name: Knight1-Sheet_6
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 333
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 180
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: d3dc56388f5796645b03caf0de817f73
       internalID: 122488341
+=======
+      spriteID: fcbc1c29fec4e4841be1b2d1e331895a
+      internalID: -1953283753
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -254,20 +370,34 @@ TextureImporter:
       name: Knight1-Sheet_7
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 666
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 360
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 2a16e0122e37b954bb5d0312e9639887
       internalID: 544000377
+=======
+      spriteID: c4dbeac915f2548449ebd6d45b4a1564
+      internalID: -871340244
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -276,20 +406,34 @@ TextureImporter:
       name: Knight1-Sheet_8
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 999
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 540
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 8c13f7b4a1c84064290f03f2bc8a293e
       internalID: -369394189
+=======
+      spriteID: 47ba0469ae7c4434bbaddd14dc816a1b
+      internalID: -124008220
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -298,20 +442,34 @@ TextureImporter:
       name: Knight1-Sheet_9
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 1332
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 720
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: a86e31b1f5c2e354e8fcff6be896d73d
       internalID: -2018250939
+=======
+      spriteID: 3dabb06426c46d34c8ee2b4acb38e04c
+      internalID: 1705632133
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -320,20 +478,34 @@ TextureImporter:
       name: Knight1-Sheet_10
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 1665
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 900
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 017f58fb62beb36438279c9de773712c
       internalID: -1298742233
+=======
+      spriteID: 3aea19b34b23ab641a2c752faf121f23
+      internalID: 669723780
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -342,20 +514,34 @@ TextureImporter:
       name: Knight1-Sheet_11
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 1998
         y: 394
         width: 333
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 1080
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 2f0fe75c7add9344ca2b1500f98fc6cc
       internalID: 1386105086
+=======
+      spriteID: 129c934b44240db4c96ffe232f74489a
+      internalID: -911786809
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -364,6 +550,7 @@ TextureImporter:
       name: Knight1-Sheet_12
       rect:
         serializedVersion: 2
+<<<<<<< HEAD
         x: 2331
         y: 394
         width: 333
@@ -568,12 +755,21 @@ TextureImporter:
         height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
+=======
+        x: 1260
+        y: 0
+        width: 180
+        height: 180
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+>>>>>>> 282be95 (add knight sprite)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: 3aeb7e70bbe94b942812fb2c3318dc71
       internalID: 82397509
       vertices: []
@@ -730,6 +926,10 @@ TextureImporter:
       bones: []
       spriteID: 35a54b0a39dd3514990790a277501628
       internalID: 1411464222
+=======
+      spriteID: d54361fb0c6ccfe43b0c5b00007fe704
+      internalID: -1003997816
+>>>>>>> 282be95 (add knight sprite)
       vertices: []
       indices: 
       edges: []
@@ -738,7 +938,11 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< HEAD
     spriteID: 6a34cd3d4a56c904681138baa0421974
+=======
+    spriteID: 02a4e458976d2a642a2339b4d2f93264
+>>>>>>> 282be95 (add knight sprite)
     internalID: 0
     vertices: []
     indices: 
@@ -748,6 +952,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
+<<<<<<< HEAD
       Knight1-Sheet_0: -2143621480
       Knight1-Sheet_1: -1628235179
       Knight1-Sheet_10: -1298742233
@@ -777,6 +982,21 @@ TextureImporter:
       Knight1-Sheet_7: 544000377
       Knight1-Sheet_8: -369394189
       Knight1-Sheet_9: -2018250939
+=======
+      Knight1-Sheet_0: 422947255
+      Knight1-Sheet_1: -1350718144
+      Knight1-Sheet_10: 669723780
+      Knight1-Sheet_11: -911786809
+      Knight1-Sheet_12: -1003997816
+      Knight1-Sheet_2: -1055591439
+      Knight1-Sheet_3: -800448061
+      Knight1-Sheet_4: 1098247488
+      Knight1-Sheet_5: -990374308
+      Knight1-Sheet_6: -1953283753
+      Knight1-Sheet_7: -871340244
+      Knight1-Sheet_8: -124008220
+      Knight1-Sheet_9: 1705632133
+>>>>>>> 282be95 (add knight sprite)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
