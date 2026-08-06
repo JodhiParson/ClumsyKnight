@@ -1436,7 +1436,7 @@ MonoBehaviour:
       Radius: 2.5
       Height: 0.1
     SplineCurvature: 0.5
-  RecenteringTarget: 2
+  RecenteringTarget: 3
   HorizontalAxis:
     Value: 0
     Center: 0
