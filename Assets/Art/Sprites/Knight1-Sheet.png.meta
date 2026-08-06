@@ -93,19 +93,6 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -118,15 +105,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0a6359a6048f1f84ab443b45528a3017
-      internalID: 422947255
+      spriteID: bf4a32b863cc7c849b8e0158cd678053
+      internalID: 727188736
       vertices: []
       indices: 
       edges: []
@@ -140,15 +127,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c9d1b3289ebc55e46a71297fbfb45089
-      internalID: -1350718144
+      spriteID: 2b9b5657ff2642647962f3e7457f3329
+      internalID: -1748329094
       vertices: []
       indices: 
       edges: []
@@ -162,15 +149,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 53bc48f9341a3de41907d7d4eee3d253
-      internalID: -1055591439
+      spriteID: 9cdbf54961240ed4ebf86edc09c0eca8
+      internalID: -1573872587
       vertices: []
       indices: 
       edges: []
@@ -184,15 +171,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7267da271a2c01445973082889bae3ce
-      internalID: -800448061
+      spriteID: 9d7d4b0f6b6be13429cfac08c198ad0f
+      internalID: -1165685923
       vertices: []
       indices: 
       edges: []
@@ -206,15 +193,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7f7f9e218378984478118e6b0195ed74
-      internalID: 1098247488
+      spriteID: 9ed61bc900a5e0949a3d9aacb0b1ed47
+      internalID: -60479213
       vertices: []
       indices: 
       edges: []
@@ -228,15 +215,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0d955a7616e7a44b8c0373f373f0f3f
-      internalID: -990374308
+      spriteID: afa7cd93cf3858240b1226d6eab55667
+      internalID: -1009759200
       vertices: []
       indices: 
       edges: []
@@ -250,15 +237,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fcbc1c29fec4e4841be1b2d1e331895a
-      internalID: -1953283753
+      spriteID: 5abb80c9a69a41645bf0636937c5ba36
+      internalID: -1433002367
       vertices: []
       indices: 
       edges: []
@@ -272,15 +259,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4dbeac915f2548449ebd6d45b4a1564
-      internalID: -871340244
+      spriteID: 4d1f5e846db626c41b86e8d85b2d59ae
+      internalID: -1855012694
       vertices: []
       indices: 
       edges: []
@@ -294,15 +281,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47ba0469ae7c4434bbaddd14dc816a1b
-      internalID: -124008220
+      spriteID: 2c4b7adc8522d0c46816968ee720e8c6
+      internalID: 1538488082
       vertices: []
       indices: 
       edges: []
@@ -316,15 +303,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3dabb06426c46d34c8ee2b4acb38e04c
-      internalID: 1705632133
+      spriteID: fdfe744dfca673a45845d0a513d359c4
+      internalID: 2082594660
       vertices: []
       indices: 
       edges: []
@@ -338,15 +325,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3aea19b34b23ab641a2c752faf121f23
-      internalID: 669723780
+      spriteID: 735b338b4aaf2164d95341390660e93e
+      internalID: -1141806778
       vertices: []
       indices: 
       edges: []
@@ -360,15 +347,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 129c934b44240db4c96ffe232f74489a
-      internalID: -911786809
+      spriteID: 4bfecf22c9aa7a14c9e2fa412f9eee95
+      internalID: -881099002
       vertices: []
       indices: 
       edges: []
@@ -382,15 +369,15 @@ TextureImporter:
         width: 180
         height: 180
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d54361fb0c6ccfe43b0c5b00007fe704
-      internalID: -1003997816
+      spriteID: 70a5dfc6cf1278b419ab67550d27769d
+      internalID: 585203506
       vertices: []
       indices: 
       edges: []
@@ -399,7 +386,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 02a4e458976d2a642a2339b4d2f93264
+    spriteID: f04ec5678ff95644e8ba8e1eed3134f2
     internalID: 0
     vertices: []
     indices: 
@@ -409,19 +396,19 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Knight1-Sheet_0: 422947255
-      Knight1-Sheet_1: -1350718144
-      Knight1-Sheet_10: 669723780
-      Knight1-Sheet_11: -911786809
-      Knight1-Sheet_12: -1003997816
-      Knight1-Sheet_2: -1055591439
-      Knight1-Sheet_3: -800448061
-      Knight1-Sheet_4: 1098247488
-      Knight1-Sheet_5: -990374308
-      Knight1-Sheet_6: -1953283753
-      Knight1-Sheet_7: -871340244
-      Knight1-Sheet_8: -124008220
-      Knight1-Sheet_9: 1705632133
+      Knight1-Sheet_0: 727188736
+      Knight1-Sheet_1: -1748329094
+      Knight1-Sheet_10: -1141806778
+      Knight1-Sheet_11: -881099002
+      Knight1-Sheet_12: 585203506
+      Knight1-Sheet_2: -1573872587
+      Knight1-Sheet_3: -1165685923
+      Knight1-Sheet_4: -60479213
+      Knight1-Sheet_5: -1009759200
+      Knight1-Sheet_6: -1433002367
+      Knight1-Sheet_7: -1855012694
+      Knight1-Sheet_8: 1538488082
+      Knight1-Sheet_9: 2082594660
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
