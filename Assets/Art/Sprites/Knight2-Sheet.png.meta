@@ -6,7 +6,11 @@ TextureImporter:
   serializedVersion: 13
   mipmaps:
     mipMapMode: 0
+<<<<<<< HEAD
     enableMipMap: 0
+=======
+    enableMipMap: 1
+>>>>>>> 442fc58 (imported env test)
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,6 +38,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
+<<<<<<< HEAD
     filterMode: 0
     aniso: 1
     mipBias: 0
@@ -44,6 +49,18 @@ TextureImporter:
   lightmap: 0
   compressionQuality: 50
   spriteMode: 2
+=======
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+  nPOTScale: 1
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 0
+>>>>>>> 442fc58 (imported env test)
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -52,9 +69,15 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
+<<<<<<< HEAD
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
+=======
+  alphaIsTransparency: 0
+  spriteTessellationDetail: -1
+  textureType: 0
+>>>>>>> 442fc58 (imported env test)
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -72,7 +95,11 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
+<<<<<<< HEAD
     textureCompression: 0
+=======
+    textureCompression: 1
+>>>>>>> 442fc58 (imported env test)
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -95,6 +122,7 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
+<<<<<<< HEAD
     sprites:
     - serializedVersion: 2
       name: Knight2-Sheet_0
@@ -382,11 +410,18 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+=======
+    sprites: []
+>>>>>>> 442fc58 (imported env test)
     outline: []
     customData: 
     physicsShape: []
     bones: []
+<<<<<<< HEAD
     spriteID: e0501cde21b791a498aef491e2ad5cd7
+=======
+    spriteID: 
+>>>>>>> 442fc58 (imported env test)
     internalID: 0
     vertices: []
     indices: 
@@ -395,6 +430,7 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
+<<<<<<< HEAD
     nameFileIdTable:
       Knight2-Sheet_0: -1044450083
       Knight2-Sheet_1: -723740269
@@ -409,6 +445,9 @@ TextureImporter:
       Knight2-Sheet_7: -1718554514
       Knight2-Sheet_8: 1071968271
       Knight2-Sheet_9: -446758880
+=======
+    nameFileIdTable: {}
+>>>>>>> 442fc58 (imported env test)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
