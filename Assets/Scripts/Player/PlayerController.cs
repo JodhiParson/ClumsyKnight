@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-// using System.Numerics;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -20,7 +19,15 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private float sprintAnimSpeedMultiplier = 1.6f;
 
+    [Header("Combo Settings")]
+    [SerializeField] private float comboWindow = 0.6f; // seconds after attack1 ends where attack2 can trigger
+    [SerializeField] private float attack1StaminaCost = 15f;
+    [SerializeField] private float attack2StaminaCost = 20f;
+
     private bool isAttacking = false;
+    private int comboStep = 0;          // 0 = no combo in progress, 1 = attack1 just played
+    private bool queuedNextAttack = false;
+    private float comboTimer = 0f;
 
     private void Awake() {
         playerControls = new PlayerControls();
@@ -79,30 +86,80 @@ public class PlayerController : MonoBehaviour
         animator.SetBool("IsWalking", isMoving);
         animator.speed = isSprinting ? sprintAnimSpeedMultiplier : 1f;
 
+        // --- Attack / combo input handling ---
         bool attackInput = playerControls.Player.Attack.triggered;
 
-        if (attackInput && !isAttacking && !stamina.IsExhausted)
+        if (attackInput && !stamina.IsExhausted)
         {
-            StartAttack();
+            if (!isAttacking && comboStep == 0)
+            {
+                StartAttack1();
+            }
+            else if (isAttacking && comboStep == 1)
+            {
+                // Buffer the click; it'll be consumed when attack1's window opens/animation ends
+                queuedNextAttack = true;
+            }
+        }
+
+        // Combo window countdown — only runs once attack1 has finished and we're waiting for a follow-up
+        if (comboStep == 1 && !isAttacking)
+        {
+            comboTimer -= Time.deltaTime;
+
+            if (queuedNextAttack)
+            {
+                StartAttack2();
+            }
+            else if (comboTimer <= 0f)
+            {
+                ResetCombo();
+            }
         }
     }
 
     private void FixedUpdate() {
-        if (isAttacking) return; // freeze physics movement entirely while attacking
+        if (isAttacking) return;
         rb.MovePosition(transform.position + movement * currentSpeed * Time.fixedDeltaTime);
     }
 
-    private void StartAttack()
+    private void StartAttack1()
     {
         isAttacking = true;
+        comboStep = 1;
+        queuedNextAttack = false;
         movement = Vector3.zero;
-        animator.SetTrigger("Attack");
-        stamina.Drain(15f);
+        animator.SetTrigger("Attack1");
+        stamina.Drain(attack1StaminaCost);
     }
 
-    public void OnAttackAnimationEnd()
+    private void StartAttack2()
+    {
+        isAttacking = true;
+        queuedNextAttack = false;
+        movement = Vector3.zero;
+        animator.SetTrigger("Attack2");
+        stamina.Drain(attack2StaminaCost);
+    }
+
+    private void ResetCombo()
+    {
+        comboStep = 0;
+        comboTimer = 0f;
+        queuedNextAttack = false;
+    }
+
+    // Called via Animation Event at the end of the Attack1 clip
+    public void OnAttack1AnimationEnd()
     {
         isAttacking = false;
-        Debug.Log("Attack ended");
+        comboTimer = comboWindow; // combo window starts counting down now
+    }
+
+    // Called via Animation Event at the end of the Attack2 clip
+    public void OnAttack2AnimationEnd()
+    {
+        isAttacking = false;
+        ResetCombo();
     }
 }
