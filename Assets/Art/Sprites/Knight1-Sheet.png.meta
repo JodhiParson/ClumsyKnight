@@ -70,10 +70,14 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
 <<<<<<< HEAD
+<<<<<<< HEAD
     maxTextureSize: 8192
 =======
     maxTextureSize: 2048
 >>>>>>> 282be95 (add knight sprite)
+=======
+    maxTextureSize: 8192
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -123,6 +127,7 @@ TextureImporter:
         x: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         y: 591
         width: 333
         height: 197
@@ -145,6 +150,11 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+        y: 591
+        width: 333
+        height: 197
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -155,12 +165,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 9057673f0a451644596b3fd8cee0f672
       internalID: -2143621480
 =======
       spriteID: 0a6359a6048f1f84ab443b45528a3017
       internalID: 422947255
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 9057673f0a451644596b3fd8cee0f672
+      internalID: -2143621480
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -171,10 +186,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 333
         y: 591
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -196,6 +215,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -206,12 +227,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 250eba9987d1f334989186082962155d
       internalID: -1628235179
 =======
       spriteID: c9d1b3289ebc55e46a71297fbfb45089
       internalID: -1350718144
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 250eba9987d1f334989186082962155d
+      internalID: -1628235179
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -222,10 +248,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 666
         y: 591
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -247,6 +277,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -257,12 +289,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: fc4f2a1493601ae458e496c0b357405d
       internalID: -101237840
 =======
       spriteID: 53bc48f9341a3de41907d7d4eee3d253
       internalID: -1055591439
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: fc4f2a1493601ae458e496c0b357405d
+      internalID: -101237840
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -273,10 +310,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 999
         y: 591
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -298,6 +339,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -308,12 +351,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: f576d65e87109804aac5b86be9f35e9d
       internalID: -1573948577
 =======
       spriteID: 7267da271a2c01445973082889bae3ce
       internalID: -800448061
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: f576d65e87109804aac5b86be9f35e9d
+      internalID: -1573948577
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -324,10 +372,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 1332
         y: 591
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -349,6 +401,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -359,12 +413,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 823b1424b42a27841bc0c198fbb8d484
       internalID: 1388568801
 =======
       spriteID: 7f7f9e218378984478118e6b0195ed74
       internalID: 1098247488
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 823b1424b42a27841bc0c198fbb8d484
+      internalID: 1388568801
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -374,6 +433,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
         y: 394
@@ -398,6 +458,11 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+        y: 394
+        width: 333
+        height: 197
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -408,12 +473,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 7e6959492fe971c4bbff6a7f2809cf24
       internalID: -1195179212
 =======
       spriteID: e0d955a7616e7a44b8c0373f373f0f3f
       internalID: -990374308
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 7e6959492fe971c4bbff6a7f2809cf24
+      internalID: -1195179212
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -424,10 +494,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 333
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -449,6 +523,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -459,12 +535,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: d3dc56388f5796645b03caf0de817f73
       internalID: 122488341
 =======
       spriteID: fcbc1c29fec4e4841be1b2d1e331895a
       internalID: -1953283753
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: d3dc56388f5796645b03caf0de817f73
+      internalID: 122488341
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -475,10 +556,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 666
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -500,6 +585,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -510,12 +597,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 2a16e0122e37b954bb5d0312e9639887
       internalID: 544000377
 =======
       spriteID: c4dbeac915f2548449ebd6d45b4a1564
       internalID: -871340244
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 2a16e0122e37b954bb5d0312e9639887
+      internalID: 544000377
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -526,10 +618,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 999
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -551,6 +647,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -561,12 +659,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 8c13f7b4a1c84064290f03f2bc8a293e
       internalID: -369394189
 =======
       spriteID: 47ba0469ae7c4434bbaddd14dc816a1b
       internalID: -124008220
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 8c13f7b4a1c84064290f03f2bc8a293e
+      internalID: -369394189
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -577,10 +680,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 1332
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -602,6 +709,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -612,12 +721,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: a86e31b1f5c2e354e8fcff6be896d73d
       internalID: -2018250939
 =======
       spriteID: 3dabb06426c46d34c8ee2b4acb38e04c
       internalID: 1705632133
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: a86e31b1f5c2e354e8fcff6be896d73d
+      internalID: -2018250939
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -628,10 +742,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 1665
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -653,6 +771,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -663,12 +783,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 017f58fb62beb36438279c9de773712c
       internalID: -1298742233
 =======
       spriteID: 3aea19b34b23ab641a2c752faf121f23
       internalID: 669723780
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 017f58fb62beb36438279c9de773712c
+      internalID: -1298742233
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -679,10 +804,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 1998
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -704,6 +833,8 @@ TextureImporter:
 =======
 >>>>>>> c93578f (save scene)
 =======
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> 6c3899c (save scene added attack animation to plug in real)
@@ -714,12 +845,17 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
       spriteID: 2f0fe75c7add9344ca2b1500f98fc6cc
       internalID: 1386105086
 =======
       spriteID: 129c934b44240db4c96ffe232f74489a
       internalID: -911786809
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 2f0fe75c7add9344ca2b1500f98fc6cc
+      internalID: 1386105086
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -730,10 +866,14 @@ TextureImporter:
         serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
         x: 2331
         y: 394
         width: 333
         height: 197
+<<<<<<< HEAD
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
 =======
@@ -773,6 +913,8 @@ TextureImporter:
         y: 394
         width: 333
         height: 197
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -781,6 +923,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
+<<<<<<< HEAD
       spriteID: f399b074d738b42458299aa2de430d32
       internalID: -522504646
       vertices: []
@@ -1126,6 +1269,10 @@ TextureImporter:
       spriteID: d54361fb0c6ccfe43b0c5b00007fe704
       internalID: -1003997816
 >>>>>>> 282be95 (add knight sprite)
+=======
+      spriteID: 62078321699b9924da6e1e71e3678a70
+      internalID: -1825622641
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       vertices: []
       indices: 
       edges: []
@@ -1134,10 +1281,10 @@ TextureImporter:
       name: Knight1-Sheet_13
       rect:
         serializedVersion: 2
-        x: 1175
-        y: 172
-        width: 235
-        height: 172
+        x: 2664
+        y: 394
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1146,8 +1293,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0cb8797b189d3549ad0b1e9d9801220
-      internalID: -692602271
+      spriteID: f399b074d738b42458299aa2de430d32
+      internalID: -522504646
       vertices: []
       indices: 
       edges: []
@@ -1156,10 +1303,10 @@ TextureImporter:
       name: Knight1-Sheet_14
       rect:
         serializedVersion: 2
-        x: 1410
-        y: 172
-        width: 235
-        height: 172
+        x: 0
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1168,8 +1315,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cad6bc2a63c37a54a9c81db6efa22231
-      internalID: 1245394502
+      spriteID: 4103e524f9e725d458d5e76ffde8b44d
+      internalID: 1560284365
       vertices: []
       indices: 
       edges: []
@@ -1178,10 +1325,10 @@ TextureImporter:
       name: Knight1-Sheet_15
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 235
-        height: 172
+        x: 333
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1190,8 +1337,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a9be71f33cd130b41becb8172c4596fb
-      internalID: -135092930
+      spriteID: ecc9fcea05088324c806ba771722aba9
+      internalID: -328683893
       vertices: []
       indices: 
       edges: []
@@ -1200,10 +1347,10 @@ TextureImporter:
       name: Knight1-Sheet_16
       rect:
         serializedVersion: 2
-        x: 235
-        y: 0
-        width: 235
-        height: 172
+        x: 666
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1212,8 +1359,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e25fda8a0ac9e75498e7cbb471303b2a
-      internalID: 786030876
+      spriteID: 565b3d53a55dace4287f2f28a9050594
+      internalID: -1712113789
       vertices: []
       indices: 
       edges: []
@@ -1222,10 +1369,10 @@ TextureImporter:
       name: Knight1-Sheet_17
       rect:
         serializedVersion: 2
-        x: 470
-        y: 0
-        width: 235
-        height: 172
+        x: 999
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1234,8 +1381,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6bd14fec538055429dd18a3c07f3ff3
-      internalID: -1973066655
+      spriteID: 07b52ccdf0fbeb3409411677eb3dbe81
+      internalID: 1447049337
       vertices: []
       indices: 
       edges: []
@@ -1244,10 +1391,10 @@ TextureImporter:
       name: Knight1-Sheet_18
       rect:
         serializedVersion: 2
-        x: 705
-        y: 0
-        width: 235
-        height: 172
+        x: 1332
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1256,8 +1403,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e9c37c84154035d4898040d2dd79d09b
-      internalID: 2052891274
+      spriteID: fd79e06dd5824b0419c3563569cd125a
+      internalID: 67471981
       vertices: []
       indices: 
       edges: []
@@ -1266,10 +1413,10 @@ TextureImporter:
       name: Knight1-Sheet_19
       rect:
         serializedVersion: 2
-        x: 940
-        y: 0
-        width: 235
-        height: 172
+        x: 1665
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1278,8 +1425,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ab6df743fd896f641a4fb758eacfe373
-      internalID: 807215462
+      spriteID: fa13b7c9fbf5ca9459c019613fd6f506
+      internalID: 55014166
       vertices: []
       indices: 
       edges: []
@@ -1288,10 +1435,10 @@ TextureImporter:
       name: Knight1-Sheet_20
       rect:
         serializedVersion: 2
-        x: 1175
-        y: 0
-        width: 235
-        height: 172
+        x: 1998
+        y: 197
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1300,8 +1447,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: feedc07079a95b5418f7d19f09093425
-      internalID: -1027720463
+      spriteID: 10122d028686f584498616d6f82c6db1
+      internalID: 516595518
       vertices: []
       indices: 
       edges: []
@@ -1310,10 +1457,10 @@ TextureImporter:
       name: Knight1-Sheet_21
       rect:
         serializedVersion: 2
-        x: 1410
+        x: 0
         y: 0
-        width: 235
-        height: 172
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1322,8 +1469,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dd17381de793174ca189596b308ac41
-      internalID: -1765034512
+      spriteID: 3aeb7e70bbe94b942812fb2c3318dc71
+      internalID: 82397509
       vertices: []
       indices: 
       edges: []
@@ -1332,10 +1479,10 @@ TextureImporter:
       name: Knight1-Sheet_22
       rect:
         serializedVersion: 2
-        x: 1645
+        x: 333
         y: 0
-        width: 235
-        height: 172
+        width: 333
+        height: 197
       alignment: 9
       pivot: {x: 0.3, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1344,8 +1491,140 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7eab7c93311468445bb49b836edd378e
-      internalID: -1089040129
+      spriteID: 927dc3bd1c9aa9a49a28ccae7c422fd3
+      internalID: 1306049102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight1-Sheet_23
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 0
+        width: 333
+        height: 197
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d69e83b859f7a498064f10b65c5b84
+      internalID: 1782531823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight1-Sheet_24
+      rect:
+        serializedVersion: 2
+        x: 999
+        y: 0
+        width: 333
+        height: 197
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1dd75c2cc660845acd735775523185
+      internalID: 433915393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight1-Sheet_25
+      rect:
+        serializedVersion: 2
+        x: 1332
+        y: 0
+        width: 333
+        height: 197
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 879b529cd8946794995b02be9e6f6d1e
+      internalID: -1488555007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight1-Sheet_26
+      rect:
+        serializedVersion: 2
+        x: 1665
+        y: 0
+        width: 333
+        height: 197
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ee2ce4536908a543acb055ce3c47ec9
+      internalID: 812772911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight1-Sheet_27
+      rect:
+        serializedVersion: 2
+        x: 1998
+        y: 0
+        width: 333
+        height: 197
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61f2ebef6a433394aa1ff8d5b7dc1704
+      internalID: -845534415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Knight1-Sheet_28
+      rect:
+        serializedVersion: 2
+        x: 2331
+        y: 0
+        width: 333
+        height: 197
+      alignment: 9
+      pivot: {x: 0.3, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a54b0a39dd3514990790a277501628
+      internalID: 1411464222
       vertices: []
       indices: 
       edges: []
@@ -1355,10 +1634,14 @@ TextureImporter:
     physicsShape: []
     bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     spriteID: 6a34cd3d4a56c904681138baa0421974
 =======
     spriteID: 02a4e458976d2a642a2339b4d2f93264
 >>>>>>> 282be95 (add knight sprite)
+=======
+    spriteID: 6a34cd3d4a56c904681138baa0421974
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
     internalID: 0
     vertices: []
     indices: 
@@ -1370,6 +1653,9 @@ TextureImporter:
     nameFileIdTable:
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
       Knight1-Sheet_0: -2143621480
       Knight1-Sheet_1: -1628235179
       Knight1-Sheet_10: -1298742233
@@ -1399,6 +1685,7 @@ TextureImporter:
       Knight1-Sheet_7: 544000377
       Knight1-Sheet_8: -369394189
       Knight1-Sheet_9: -2018250939
+<<<<<<< HEAD
 =======
       Knight1-Sheet_0: 422947255
       Knight1-Sheet_1: -1350718144
@@ -1439,6 +1726,8 @@ TextureImporter:
       Knight1-Sheet_8: 1538488082
       Knight1-Sheet_9: 2082594660
 >>>>>>> 56d6a24 (sprite sheet)
+=======
+>>>>>>> 61b2e3a (Added attack 1 and 2 combo animation)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
