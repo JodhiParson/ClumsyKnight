@@ -82,4 +82,12 @@ public class Health : MonoBehaviour
     {
         Destroy(gameObject);
     }
+    void Update()
+    {
+        healthText.text = currentHealth.ToString();
+    }
+    public void Die()
+    {
+        Destroy(gameObject);
+    }
 }
