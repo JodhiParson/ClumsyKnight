@@ -4,11 +4,11 @@ public class AnimationEventRelay : MonoBehaviour
 {
     [SerializeField] private PlayerController playerController;
     public WeaponHitbox weaponHitbox;
-    public AudioSource swingSound;
+    public AudioClip swingSound;
 
     public void EnableHitbox() => weaponHitbox.EnableHitbox();
     public void DisableHitbox() => weaponHitbox.DisableHitbox();
-    public void PlaySwingSound() => swingSound.Play();
+    public void PlaySwingSound() => AudioSource.PlayClipAtPoint(swingSound, transform.position);
 
     public void OnAttack1AnimationEnd()
     {
