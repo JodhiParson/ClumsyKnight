@@ -7,10 +7,14 @@ TextureImporter:
   mipmaps:
     mipMapMode: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
     enableMipMap: 0
 =======
     enableMipMap: 1
 >>>>>>> 442fc58 (imported env test)
+=======
+    enableMipMap: 0
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -39,6 +43,7 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
     filterMode: 0
     aniso: 1
     mipBias: 0
@@ -51,16 +56,23 @@ TextureImporter:
   spriteMode: 2
 =======
     filterMode: 1
+=======
+    filterMode: 0
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     aniso: 1
     mipBias: 0
-    wrapU: 0
-    wrapV: 0
+    wrapU: 1
+    wrapV: 1
     wrapW: 0
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
+<<<<<<< HEAD
   spriteMode: 0
 >>>>>>> 442fc58 (imported env test)
+=======
+  spriteMode: 2
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,6 +82,7 @@ TextureImporter:
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
   textureType: 8
@@ -78,6 +91,11 @@ TextureImporter:
   spriteTessellationDetail: -1
   textureType: 0
 >>>>>>> 442fc58 (imported env test)
+=======
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
   textureShape: 1
   singleChannelComponent: 0
   flipbookRows: 1
@@ -96,10 +114,14 @@ TextureImporter:
     resizeAlgorithm: 0
     textureFormat: -1
 <<<<<<< HEAD
+<<<<<<< HEAD
     textureCompression: 0
 =======
     textureCompression: 1
 >>>>>>> 442fc58 (imported env test)
+=======
+    textureCompression: 0
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -123,6 +145,9 @@ TextureImporter:
   spriteSheet:
     serializedVersion: 2
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     sprites:
     - serializedVersion: 2
       name: Knight2-Sheet_0
@@ -133,7 +158,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -155,7 +184,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -177,7 +210,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -199,7 +236,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -221,7 +262,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -243,7 +288,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -265,7 +314,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -287,7 +340,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -309,7 +366,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -331,7 +392,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -353,7 +418,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -375,7 +444,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -397,7 +470,11 @@ TextureImporter:
         width: 208
         height: 170
       alignment: 9
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
+=======
+      pivot: {x: 0.3, y: 0.5}
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -410,18 +487,25 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+<<<<<<< HEAD
 =======
     sprites: []
 >>>>>>> 442fc58 (imported env test)
+=======
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     outline: []
     customData: 
     physicsShape: []
     bones: []
 <<<<<<< HEAD
+<<<<<<< HEAD
     spriteID: e0501cde21b791a498aef491e2ad5cd7
 =======
     spriteID: 
 >>>>>>> 442fc58 (imported env test)
+=======
+    spriteID: e0501cde21b791a498aef491e2ad5cd7
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     internalID: 0
     vertices: []
     indices: 
@@ -431,6 +515,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
     nameFileIdTable:
       Knight2-Sheet_0: -1044450083
       Knight2-Sheet_1: -723740269
@@ -445,9 +532,12 @@ TextureImporter:
       Knight2-Sheet_7: -1718554514
       Knight2-Sheet_8: 1071968271
       Knight2-Sheet_9: -446758880
+<<<<<<< HEAD
 =======
     nameFileIdTable: {}
 >>>>>>> 442fc58 (imported env test)
+=======
+>>>>>>> a26491d (added roll animation and changed enemy health bar)
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

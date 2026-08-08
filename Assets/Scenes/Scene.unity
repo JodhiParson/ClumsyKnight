@@ -1264,7 +1264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerController: {fileID: 1355609975}
   weaponHitbox: {fileID: 816753148}
-  swingSound: {fileID: 0}
+  swingSound: {fileID: 8300000, guid: c56f6bf2fad81bc4981b4f5d62043477, type: 3}
 --- !u!1 &1050270452
 GameObject:
   m_ObjectHideFlags: 0
@@ -1526,8 +1526,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   sprintSpeed: 8
-  staminaDrainRate: 15
-  staminaRegenRate: 10
+  staminaDrainRate: 10
+  staminaRegenRate: 15
   stamina: {fileID: 1355609979}
   visualTransform: {fileID: 1041397872}
   animator: {fileID: 1041397874}
@@ -1535,6 +1535,10 @@ MonoBehaviour:
   comboWindow: 0.5
   attack1StaminaCost: 15
   attack2StaminaCost: 10
+  rollSpeed: 10
+  rollDuration: 0.55
+  rollStaminaCost: 10
+  rollCooldown: 0.2
 --- !u!4 &1355609976
 Transform:
   m_ObjectHideFlags: 0
