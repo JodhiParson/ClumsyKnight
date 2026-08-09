@@ -82,10 +82,61 @@ public class Health : MonoBehaviour
     {
         Destroy(gameObject);
     }
+
     void Update()
     {
         healthText.text = currentHealth.ToString();
+        healthBar.value = currentHealth;
+
+        if (Input.GetKeyDown(useKey))
+        {
+            UsePotion();
+        }
     }
+
+    public void UsePotion()
+    {
+        if (potionCount <= 0)
+        {
+            Debug.Log("No potions left.");
+            return;
+        }
+
+        if (currentHealth >= maxHealth)
+        {
+            Debug.Log("Already at full health.");
+            return;
+        }
+
+        int healAmount = Mathf.RoundToInt(maxHealth * healPercent);
+        currentHealth = Mathf.Min(currentHealth + healAmount, maxHealth);
+        healthBar.value = currentHealth;
+
+        potionCount--;
+        UpdatePotionUI();
+
+        Debug.Log($"Used potion. Healed {healAmount}. Current: {currentHealth}/{maxHealth}. Potions left: {potionCount}");
+    }
+
+    public void TakeDamage(int amount)
+    {
+        currentHealth = Mathf.Max(currentHealth - amount, 0);
+        healthBar.value = currentHealth;
+
+        if (currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void UpdatePotionUI()
+    {
+        if (potionText != null)
+        {
+            potionText.text = potionCount.ToString();
+        }
+    }
+
     public void Die()
     {
         Destroy(gameObject);
