@@ -1838,7 +1838,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 3.33297, y: 1.97}
+  m_Size: {x: 3.33, y: 1.97}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -2677,18 +2677,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 5
   sprintSpeed: 8
-  staminaDrainRate: 10
-  staminaRegenRate: 15
+  staminaDrainRate: 15
+  staminaRegenRate: 10
   stamina: {fileID: 1355609979}
   visualTransform: {fileID: 1041397872}
   animator: {fileID: 1041397874}
   sprintAnimSpeedMultiplier: 1.6
-  comboWindow: 0.5
+  comboWindow: 0.6
   attack1StaminaCost: 15
-  attack2StaminaCost: 10
-  rollSpeed: 13
-  rollDuration: 0.55
-  rollStaminaCost: 10
+  attack2StaminaCost: 20
+  rollSpeed: 12
+  rollDuration: 0.4
+  rollStaminaCost: 20
   rollCooldown: 0.2
 --- !u!4 &1355609976
 Transform:
