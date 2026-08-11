@@ -117,7 +117,7 @@ GameObject:
   - component: {fileID: -3527524871568216663}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Enemy
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -209,6 +209,7 @@ MonoBehaviour:
   currentHealth: 100
   maxHealth: 100
   enemyhealthBar: {fileID: 4741504906369052813}
+  augmentUI: {fileID: 0}
 --- !u!136 &2077065443928987019
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -240,9 +241,9 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4077274568824125099}
   serializedVersion: 4
-  m_Mass: 1
+  m_Mass: 50
   m_Drag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 100
   m_CenterOfMass: {x: 0, y: 0, z: 0}
   m_InertiaTensor: {x: 1, y: 1, z: 1}
   m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}

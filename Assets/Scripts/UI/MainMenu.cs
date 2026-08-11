@@ -55,7 +55,7 @@ public class MainMenu : MonoBehaviour
     {
         Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
     }
-        public void Quit()
+    public void Quit()
     {
         #if UNITY_EDITOR
             UnityEditor.EditorApplication.isPlaying = false;
@@ -63,12 +63,12 @@ public class MainMenu : MonoBehaviour
             Application.Quit();
         #endif
     }
-        public void Resume()
+    public void Resume()
     {
         Time.timeScale = 1f; 
     }
 
-    void Pause()
+    public void Pause()
     {
         Time.timeScale = 0f;
     }
