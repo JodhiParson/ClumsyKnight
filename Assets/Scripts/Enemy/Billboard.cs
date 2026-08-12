@@ -2,15 +2,34 @@ using UnityEngine;
 
 public class Billboard : MonoBehaviour
 {
-    private Camera mainCamera;
+    public enum Mode { FullFace, YAxisOnly }
+    public Mode mode = Mode.YAxisOnly; // Y-axis is usually best for characters standing on ground
 
-    private void Start()
+    Camera cam;
+
+    void Start()
     {
-        mainCamera = Camera.main;
+        cam = Camera.main;
     }
 
-    private void LateUpdate()
+    void LateUpdate()
     {
-        transform.forward = mainCamera.transform.forward;
+        if (cam == null) return;
+
+        if (mode == Mode.FullFace)
+        {
+            // faces camera exactly, on all axes (good for particles/icons)
+            transform.rotation = cam.transform.rotation;
+        }
+        else
+        {
+            // only rotates around Y - keeps sprite upright, just turns to face camera left/right
+            Vector3 dir = transform.position - cam.transform.position;
+            dir.y = 0f;
+            if (dir.sqrMagnitude > 0.001f)
+            {
+                transform.rotation = Quaternion.LookRotation(dir);
+            }
+        }
     }
 }
