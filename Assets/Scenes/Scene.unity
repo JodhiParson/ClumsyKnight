@@ -6685,6 +6685,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 5465260073537698920, guid: f41bf0e14a031874297d56ea2da4f632, type: 3}
+      propertyPath: m_CastShadows
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5465260073537698920, guid: f41bf0e14a031874297d56ea2da4f632, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9915dc5feeb08174fb11faa045c34579, type: 2}
     - target: {fileID: 5623017082167637063, guid: f41bf0e14a031874297d56ea2da4f632, type: 3}
       propertyPath: m_LocalPosition.x
       value: 18.83
