@@ -159,10 +159,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -185,10 +189,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -211,10 +219,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -237,10 +249,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -263,10 +279,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -289,10 +309,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -315,10 +339,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -341,10 +369,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -367,10 +399,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -393,10 +429,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -419,10 +459,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -445,10 +489,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -471,10 +519,14 @@ TextureImporter:
         height: 170
       alignment: 9
 <<<<<<< HEAD
+<<<<<<< HEAD
       pivot: {x: 0.24, y: 0.63}
 =======
       pivot: {x: 0.3, y: 0.5}
 >>>>>>> a26491d (added roll animation and changed enemy health bar)
+=======
+      pivot: {x: 0.24, y: 0.63}
+>>>>>>> 68d0a99 (Added Tripping, Player Throwing and pickup weapon)
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
