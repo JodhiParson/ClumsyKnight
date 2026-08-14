@@ -40,6 +40,31 @@ public class PlayerController : MonoBehaviour
     private float rollTimer = 0f;
     private float rollCooldownTimer = 0f;
 
+    [Header("Trip Settings")]
+    [SerializeField] private float tripDuration = 1f;
+    [SerializeField] private float tripImpulseForce = 5f;
+    [SerializeField] private float rollTripChance = 0.1f;
+    [SerializeField] private float rollTripStaminaCost = 30f;
+
+    [Header("Throw Weapon Settings")]
+    [SerializeField] private float throwWeaponStaminaCost = 25f;
+    [SerializeField] private GameObject weaponSpinPrefab;
+    [SerializeField] private Transform weaponSpawnPoint;
+    [SerializeField] private float weaponThrowForce = 15f;
+    [SerializeField] private float weaponSpinTorque = 10f;
+    [SerializeField] private float weaponThrowUpwardArc = 0.4f;
+
+    // True while the player has their weapon equipped; flipped to false
+    // the moment the weapon actually leaves the hand
+    public bool weaponEquip = true;
+
+    private bool isTripping = false;
+    private float tripTimer = 0f;
+
+    // Read-only state exposed for other scripts (e.g. ClumsyEvents)
+    public bool IsMoving => movement.sqrMagnitude > 0f;
+    public bool IsTripping => isTripping;
+
     private void Awake() {
         playerControls = new PlayerControls();
     }
@@ -62,7 +87,7 @@ public class PlayerController : MonoBehaviour
         float x = playerControls.Player.Move.ReadValue<Vector2>().x;
         float z = playerControls.Player.Move.ReadValue<Vector2>().y;
 
-        if (isAttacking || isRolling)
+        if (isAttacking || isRolling || isTripping)
         {
             movement = Vector3.zero;
         }
@@ -81,7 +106,7 @@ public class PlayerController : MonoBehaviour
         bool isMoving = movement.sqrMagnitude > 0f;
 
         bool wantsToSprint = playerControls.Player.Sprint.IsPressed();
-        bool isSprinting = wantsToSprint && isMoving && !stamina.IsExhausted && !isAttacking && !isRolling;
+        bool isSprinting = wantsToSprint && isMoving && !stamina.IsExhausted && !isAttacking && !isRolling && !isTripping;
 
         currentSpeed = isSprinting ? sprintSpeed : walkSpeed;
 
@@ -100,7 +125,7 @@ public class PlayerController : MonoBehaviour
         // --- Attack / combo input handling ---
         bool attackInput = playerControls.Player.Attack.triggered;
 
-        if (attackInput && !stamina.IsExhausted && !isRolling)
+        if (attackInput && !stamina.IsExhausted && !isRolling && !isTripping && weaponEquip)
         {
             if (!isAttacking && comboStep == 0)
             {
@@ -118,11 +143,11 @@ public class PlayerController : MonoBehaviour
         {
             comboTimer -= Time.deltaTime;
 
-            if (queuedNextAttack)
+            if (queuedNextAttack && weaponEquip)
             {
                 StartAttack2();
             }
-            else if (comboTimer <= 0f)
+            else if (comboTimer <= 0f || !weaponEquip)
             {
                 ResetCombo();
             }
@@ -134,9 +159,19 @@ public class PlayerController : MonoBehaviour
         if (rollCooldownTimer > 0f)
             rollCooldownTimer -= Time.deltaTime;
 
-        if (rollInput && !isRolling && !isAttacking && rollCooldownTimer <= 0f && !stamina.IsExhausted)
+        if (rollInput && !isRolling && !isAttacking && !isTripping && rollCooldownTimer <= 0f && !stamina.IsExhausted)
         {
-            StartRoll();
+            rollCooldownTimer = rollCooldown;
+
+            if (Random.value < rollTripChance)
+            {
+                stamina.Drain(rollTripStaminaCost);
+                TryTrip();
+            }
+            else
+            {
+                StartRoll();
+            }
         }
 
         if (isRolling)
@@ -147,9 +182,20 @@ public class PlayerController : MonoBehaviour
                 EndRoll();
             }
         }
+
+        // --- Trip countdown ---
+        if (isTripping)
+        {
+            tripTimer -= Time.deltaTime;
+            if (tripTimer <= 0f)
+            {
+                isTripping = false;
+            }
+        }
     }
 
     private void FixedUpdate() {
+        if (isTripping) return;
         if (isRolling)
         {
             rb.MovePosition(transform.position + rollDirection * rollSpeed * Time.fixedDeltaTime);
@@ -161,6 +207,7 @@ public class PlayerController : MonoBehaviour
 
     private void StartAttack1()
     {
+        animator.ResetTrigger("CancelAttack");
         isAttacking = true;
         comboStep = 1;
         queuedNextAttack = false;
@@ -171,6 +218,7 @@ public class PlayerController : MonoBehaviour
 
     private void StartAttack2()
     {
+        animator.ResetTrigger("CancelAttack");
         isAttacking = true;
         queuedNextAttack = false;
         movement = Vector3.zero;
@@ -189,7 +237,6 @@ public class PlayerController : MonoBehaviour
     {
         isRolling = true;
         rollTimer = rollDuration;
-        rollCooldownTimer = rollCooldown;
 
         // Roll in whatever direction the player is currently moving;
         // fall back to facing direction if standing still
@@ -208,6 +255,90 @@ public class PlayerController : MonoBehaviour
     private void EndRoll()
     {
         isRolling = false;
+    }
+
+    public bool TryTrip()
+    {
+        if (isTripping || isAttacking || isRolling) return false;
+
+        isTripping = true;
+        tripTimer = tripDuration;
+        movement = Vector3.zero;
+        rb.linearVelocity = Vector3.zero; // use rb.velocity instead if you're on Unity < 6
+        rb.AddForce(Vector3.down * tripImpulseForce, ForceMode.Impulse);
+        animator.SetTrigger("Trip");
+        return true;
+    }
+
+    // Voluntary throw path — plays a dedicated ThrowWeapon clip.
+    // The actual release happens later via OnWeaponReleaseAnimationEvent,
+    // hooked to that clip's release frame.
+    public bool TryThrowWeapon()
+    {
+        if (isTripping || isAttacking || isRolling || !weaponEquip || stamina.IsExhausted) return false;
+
+        stamina.Drain(throwWeaponStaminaCost);
+        animator.SetTrigger("ThrowWeapon");
+        return true;
+    }
+
+    // Fumble path — cuts an in-progress Attack1/Attack2 clip short and
+    // releases the weapon immediately, no separate throw clip involved.
+    // Requires Attack1 -> Idle AND Attack2 -> Idle transitions using the
+    // "CancelAttack" trigger with Has Exit Time unchecked on BOTH.
+    public bool CancelAttackAndThrowWeapon()
+    {
+        if (isTripping || isRolling) return false;
+
+        // Always interrupt the swing once this fires, even if the throw itself
+        // can't happen — a fumble that can't launch anything should still cancel.
+        isAttacking = false;
+        ResetCombo();
+        movement = Vector3.zero;
+        animator.SetTrigger("CancelAttack");
+
+        if (!weaponEquip || stamina.IsExhausted) return false;
+
+        stamina.Drain(throwWeaponStaminaCost);
+        ReleaseWeaponProjectile();
+        return true;
+    }
+
+    // Hook this to an Animation Event on the ThrowWeapon clip, placed at the
+    // exact frame the weapon should leave the player's hand.
+    public void OnWeaponReleaseAnimationEvent()
+    {
+        ReleaseWeaponProjectile();
+    }
+
+    private void ReleaseWeaponProjectile()
+    {
+        weaponEquip = false;
+        animator.SetBool("WeaponEquipped", weaponEquip);
+
+        if (weaponSpinPrefab == null || weaponSpawnPoint == null) return;
+
+        GameObject thrownWeapon = Instantiate(weaponSpinPrefab, weaponSpawnPoint.position, weaponSpawnPoint.rotation);
+
+        if (thrownWeapon.TryGetComponent(out Rigidbody weaponRb))
+        {
+            // Prefabs are sometimes saved kinematic (e.g. for holding in-hand) —
+            // force it into a simulated state so AddForce actually does something
+            weaponRb.isKinematic = false;
+            weaponRb.useGravity = true;
+
+            Vector3 facing = new Vector3(Mathf.Sign(visualTransform.localScale.x), 0f, 0f);
+            Vector3 throwDirection = (facing + Vector3.up * weaponThrowUpwardArc).normalized;
+
+            weaponRb.AddForce(throwDirection * weaponThrowForce, ForceMode.Impulse);
+            weaponRb.AddTorque(Vector3.forward * weaponSpinTorque, ForceMode.Impulse);
+        }
+    }
+
+    public void EquipWeapon()
+    {
+        weaponEquip = true;
+        animator.SetBool("WeaponEquipped", weaponEquip);
     }
 
     public void OnAttack1AnimationEnd()
