@@ -161,11 +161,30 @@ MonoBehaviour:
     m_Bits: 128
   viewRadius: 15
   viewAngle: 147
+  moveSpeed: 1.5
   loseInterestTime: 3
-  attackRange: 2
-  attackRangeBuffer: 0.3
+  leashRange: 20
+  predictionTime: 0.4
+  closeDistanceThreshold: 7
+  preferredEngageDistanceMin: 1.5
+  preferredEngageDistanceMax: 4
+  circleStrafeAngularSpeed: 80
+  strafeDirectionChangeInterval: 1.5
+  engageDistanceRerollInterval: 2.5
+  alertMemoryDuration: 12
+  alertedViewRadiusMultiplier: 1.5
+  hearingRadius: 4
   patrolPoints: []
   patrolWaitTime: 2
+  attacks: []
+  maxPoise: 50
+  poiseRegenPerSecond: 10
+  staggerDuration: 1.2
+  poiseRegenDelay: 2.5
+  criticalStaggerMultiplier: 1.8
+  knockbackDistance: 0.4
+  knockbackDuration: 0.15
+  isCriticallyStaggered: 0
 --- !u!114 &6908102681085585785
 MonoBehaviour:
   m_ObjectHideFlags: 0

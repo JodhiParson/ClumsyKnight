@@ -4,6 +4,7 @@ using System.Collections.Generic;
 public class WeaponHitbox : MonoBehaviour
 {
     public int damageAmount = 25;
+    public float poiseDamageAmount = 20f;
 
     // Prevents hitting the same enemy multiple times in one swing
     private HashSet<Collider> hitEnemiesThisSwing = new HashSet<Collider>();
@@ -27,6 +28,12 @@ public class WeaponHitbox : MonoBehaviour
             {
                 enemyHealth.TakeDamage(damageAmount);
                 hitEnemiesThisSwing.Add(other);
+            }
+
+            EnemyAI enemyAI = other.GetComponentInParent<EnemyAI>();
+            if (enemyAI != null)
+            {
+                enemyAI.TakeDamage(damageAmount, poiseDamageAmount, transform.position);
             }
         }
     }

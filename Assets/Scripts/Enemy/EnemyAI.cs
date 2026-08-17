@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.AI;
+using System.Collections;
 using System.Collections.Generic;
 
 [RequireComponent(typeof(NavMeshAgent))]
@@ -15,9 +16,23 @@ public class EnemyAI : MonoBehaviour
     [Range(0, 360)] public float viewAngle = 90f;
 
     [Header("Chase Settings")]
+    public float moveSpeed = 3.5f; // keep this below the player's walk speed (and well below sprint) so it can't outrun/flee from them
     public float loseInterestTime = 3f;
     public float leashRange = 20f; // how far from spawn before giving up the chase entirely
     public float predictionTime = 0.4f; // how far ahead to lead the player's position while chasing
+
+    [Header("Engagement / Circle-Strafe")]
+    public float closeDistanceThreshold = 7f;      // beyond this, just close the gap directly instead of circling
+    public float preferredEngageDistanceMin = 2.5f; // once engaged, orbit no closer than this
+    public float preferredEngageDistanceMax = 4.5f; // ...and no farther than this
+    public float circleStrafeAngularSpeed = 35f;    // degrees/sec the enemy orbits the player at - keep this modest, see note in Start()
+    public float strafeDirectionChangeInterval = 2.5f; // how often it might flip orbit direction, for unpredictability
+    public float engageDistanceRerollInterval = 4f;    // how often it re-picks a target distance within the band
+
+    float strafeDirection = 1f;
+    float nextStrafeDirectionChangeTime;
+    float engageDistance;
+    float nextEngageDistanceRerollTime;
 
     [Header("Memory / Alertness")]
     public float alertMemoryDuration = 12f;      // how long the enemy stays "on alert" after losing sight of the player
@@ -40,6 +55,13 @@ public class EnemyAI : MonoBehaviour
     public float maxPoise = 50f;
     public float poiseRegenPerSecond = 10f;
     public float staggerDuration = 1.2f;
+    public float poiseRegenDelay = 2.5f;       // must go this long without taking poise damage before it starts regenerating
+    public float criticalStaggerMultiplier = 1.8f; // longer stagger, riposte-eligible, when poise is overkilled
+    public float knockbackDistance = 0.4f;
+    public float knockbackDuration = 0.15f;
+
+    float lastPoiseDamageTime = -999f;
+    public bool isCriticallyStaggered;
 
     [Header("Group Behavior")]
     public static int maxConcurrentAttackers = 1; // stops the whole pack from attacking at once
@@ -77,6 +99,7 @@ public class EnemyAI : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
+        agent.speed = moveSpeed;
         spawnPosition = transform.position;
         currentPoise = maxPoise;
 
@@ -96,6 +119,11 @@ public class EnemyAI : MonoBehaviour
 
         float startDelay = Random.Range(0f, 0.15f);
         InvokeRepeating(nameof(DetectionCheck), startDelay, 0.15f);
+
+        strafeDirection = Random.value < 0.5f ? 1f : -1f;
+        engageDistance = Random.Range(preferredEngageDistanceMin, preferredEngageDistanceMax);
+        nextStrafeDirectionChangeTime = Time.time + strafeDirectionChangeInterval * Random.Range(0.7f, 1.3f);
+        nextEngageDistanceRerollTime = Time.time + engageDistanceRerollInterval * Random.Range(0.7f, 1.3f);
     }
 
     void DetectionCheck()
@@ -138,9 +166,13 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
-        // Poise regenerates whenever we're not mid-stagger
-        if (currentState != State.Staggered && currentPoise < maxPoise)
+        // Poise regenerates only after a delay since the last poise-damaging hit, and never mid-stagger
+        if (currentState != State.Staggered
+            && currentPoise < maxPoise
+            && Time.time - lastPoiseDamageTime >= poiseRegenDelay)
+        {
             currentPoise = Mathf.Min(maxPoise, currentPoise + poiseRegenPerSecond * Time.deltaTime);
+        }
 
         if (player == null || !agent.isOnNavMesh) return;
 
@@ -149,16 +181,14 @@ public class EnemyAI : MonoBehaviour
         switch (currentState)
         {
             case State.Patrol:
+                agent.updateRotation = true; // let the agent face its own travel direction while roaming
                 Patrol();
                 break;
 
             case State.Chase:
                 agent.isStopped = false;
-
-                // Lead the player's position based on their current velocity, rather than
-                // always pathing to where they currently are (which feels like it's lagging behind)
-                Vector3 predictedPos = player.position + playerVelocity * predictionTime;
-                agent.SetDestination(predictedPos);
+                agent.updateRotation = false; // we control facing manually so it always looks at the player, not its strafe path
+                FacePlayer();
 
                 // Give up entirely if the player fled far past our leash range
                 if (Vector3.Distance(spawnPosition, transform.position) > leashRange)
@@ -167,6 +197,21 @@ public class EnemyAI : MonoBehaviour
                     lastKnownPosition = spawnPosition;
                     searchTimer = 0.1f; // return-to-spawn, don't linger
                     break;
+                }
+
+                if (distToPlayer > closeDistanceThreshold)
+                {
+                    // Too far to meaningfully circle - lead the player's position based on their
+                    // current velocity, rather than always pathing to where they currently are
+                    Vector3 predictedPos = player.position + playerVelocity * predictionTime;
+                    agent.SetDestination(predictedPos);
+                }
+                else
+                {
+                    // Close enough to engage - orbit at a preferred range instead of beelining,
+                    // like it's circling for an opening rather than just walking into you
+                    UpdateStrafeTarget();
+                    agent.SetDestination(ComputeStrafeDestination());
                 }
 
                 AttackMove readyMove = PickAttack(distToPlayer);
@@ -205,6 +250,7 @@ public class EnemyAI : MonoBehaviour
 
             case State.Search:
                 agent.isStopped = false;
+                agent.updateRotation = true; // back to normal movement-facing while wandering to last known position
                 agent.SetDestination(lastKnownPosition);
                 searchTimer -= Time.deltaTime;
                 bool reachedLastKnown = !agent.pathPending && agent.remainingDistance < 0.5f;
@@ -217,6 +263,7 @@ public class EnemyAI : MonoBehaviour
                 if (actionTimer <= 0f)
                 {
                     currentPoise = maxPoise;
+                    isCriticallyStaggered = false;
                     ReleaseAttackSlot();
                     currentState = State.Chase;
                 }
@@ -225,15 +272,82 @@ public class EnemyAI : MonoBehaviour
     }
 
     // Call this from whatever deals damage to the enemy (player weapon hitbox, etc.)
-    public void TakeDamage(float damage, float poiseDamage)
+    // hitOrigin is the world position the hit came from (e.g. the attacker's position or the weapon hit point),
+    // used to push the enemy back away from the hit on stagger.
+    public void TakeDamage(float damage, float poiseDamage, Vector3 hitOrigin)
     {
         currentPoise -= poiseDamage;
+        lastPoiseDamageTime = Time.time;
+
         if (currentPoise <= 0f && currentState != State.Staggered)
         {
             ReleaseAttackSlot();
+            currentAttack = null;
+            // TODO: cancel windup animation / VFX here
+
+            // Overkill on poise damage = a harder stagger, opens up a riposte window
+            isCriticallyStaggered = currentPoise < -maxPoise * 0.5f;
+            actionTimer = staggerDuration * (isCriticallyStaggered ? criticalStaggerMultiplier : 1f);
             currentState = State.Staggered;
-            actionTimer = staggerDuration;
+
+            Vector3 dir = transform.position - hitOrigin;
+            StartCoroutine(StaggerKnockback(dir));
         }
+
+        // TODO: apply `damage` to health here
+    }
+
+    IEnumerator StaggerKnockback(Vector3 dir)
+    {
+        dir.y = 0f;
+        if (dir.sqrMagnitude < 0.001f) yield break;
+        dir.Normalize();
+
+        float t = 0f;
+        while (t < knockbackDuration)
+        {
+            // The agent can end up off-mesh mid-knockback (death destroying the object,
+            // getting shoved off a ledge, being disabled elsewhere) - bail out instead of
+            // calling Move() on an agent that isn't currently placed on the NavMesh.
+            if (agent == null || !agent.isActiveAndEnabled || !agent.isOnNavMesh)
+                yield break;
+
+            agent.Move(dir * (knockbackDistance / knockbackDuration) * Time.deltaTime);
+            t += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    void UpdateStrafeTarget()
+    {
+        // Occasionally reverse orbit direction so the circling doesn't read as a predictable loop
+        if (Time.time >= nextStrafeDirectionChangeTime)
+        {
+            if (Random.value < 0.5f) strafeDirection *= -1f;
+            nextStrafeDirectionChangeTime = Time.time + strafeDirectionChangeInterval * Random.Range(0.7f, 1.3f);
+        }
+
+        // Periodically re-pick where in the band it wants to sit, so it drifts in/out a bit
+        // rather than locking to one exact radius
+        if (Time.time >= nextEngageDistanceRerollTime)
+        {
+            engageDistance = Random.Range(preferredEngageDistanceMin, preferredEngageDistanceMax);
+            nextEngageDistanceRerollTime = Time.time + engageDistanceRerollInterval * Random.Range(0.7f, 1.3f);
+        }
+    }
+
+    Vector3 ComputeStrafeDestination()
+    {
+        Vector3 offset = transform.position - player.position;
+        offset.y = 0f;
+        if (offset.sqrMagnitude < 0.01f) offset = -transform.forward; // fallback if standing on top of the player
+
+        // Rotate the current offset around the player to orbit, snapping distance toward the target engage distance
+        float angleStep = strafeDirection * circleStrafeAngularSpeed * Time.deltaTime;
+        Vector3 rotatedOffset = Quaternion.Euler(0f, angleStep, 0f) * offset;
+        Vector3 desiredOffset = rotatedOffset.normalized * engageDistance;
+
+        return player.position + desiredOffset;
     }
 
     AttackMove PickAttack(float distance)
@@ -346,6 +460,12 @@ public class EnemyAI : MonoBehaviour
 
         Gizmos.color = Color.cyan;
         Gizmos.DrawWireSphere(transform.position, leashRange);
+
+        Gizmos.color = Color.green;
+        Gizmos.DrawWireSphere(transform.position, closeDistanceThreshold);
+        Gizmos.color = new Color(0f, 1f, 0.5f);
+        Gizmos.DrawWireSphere(transform.position, preferredEngageDistanceMin);
+        Gizmos.DrawWireSphere(transform.position, preferredEngageDistanceMax);
 
         bool alertedGizmo = Application.isPlaying && Time.time < alertedUntil;
         Gizmos.color = new Color(1f, 0.5f, 0f); // orange
