@@ -3,9 +3,10 @@ using System.Collections.Generic;
 
 public class MainMenu : MonoBehaviour
 {
-    public GameObject mainMenuUI;
     public GameObject optionsMenuUI;
     public GameObject shopMenuUI;
+    public GameObject armoryUI;
+    public GameObject HUD;
 
     private List<GameObject> otherMenus;
 
@@ -13,10 +14,10 @@ public class MainMenu : MonoBehaviour
     {
         otherMenus = new List<GameObject> { shopMenuUI }; // add any future menus here
 
-        mainMenuUI.SetActive(true);
         optionsMenuUI.SetActive(false);
         shopMenuUI.SetActive(false);
-        Pause();
+        armoryUI.SetActive(false);
+        HUD.SetActive(true);
     }
 
     void Update()
@@ -67,11 +68,6 @@ public class MainMenu : MonoBehaviour
         return closedSomething;
     }
 
-    public void StartGame()
-    {
-        mainMenuUI.SetActive(false);
-        Resume();
-    }
 
     public void OpenOptionsMenu()
     {
@@ -84,12 +80,6 @@ public class MainMenu : MonoBehaviour
         shopMenuUI.SetActive(false);
     }
 
-    public void BackToMainMenu()
-    {
-        mainMenuUI.SetActive(true);
-        optionsMenuUI.SetActive(false);
-        Pause();
-    }
 
     public void SetWindowedMode()
     {
