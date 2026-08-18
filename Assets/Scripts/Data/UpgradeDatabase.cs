@@ -10,7 +10,11 @@ public class UpgradeDatabase : MonoBehaviour
     [Tooltip("The Upgrades CSV, imported as a TextAsset (UpgradeID,Stat,Amount)")]
     public TextAsset upgradeCsv;
 
-    private readonly List<UpgradeData> allUpgrades = new List<UpgradeData>();
+    // Upgrades grouped by stat, kept in CSV order (i.e. tier order: ATK_1, ATK_2, ATK_3...)
+    private readonly Dictionary<StatType, List<UpgradeData>> upgradesByStat = new Dictionary<StatType, List<UpgradeData>>();
+
+    // How many tiers of each stat the player has already taken
+    private readonly Dictionary<StatType, int> takenCountByStat = new Dictionary<StatType, int>();
 
     private void Awake()
     {
@@ -20,7 +24,8 @@ public class UpgradeDatabase : MonoBehaviour
 
     private void ParseCsv()
     {
-        allUpgrades.Clear();
+        upgradesByStat.Clear();
+        takenCountByStat.Clear();
 
         if (upgradeCsv == null)
         {
@@ -55,27 +60,66 @@ public class UpgradeDatabase : MonoBehaviour
                 continue;
             }
 
-            allUpgrades.Add(new UpgradeData
+            var upgrade = new UpgradeData
             {
                 id = cols[0].Trim(),
                 stat = stat,
                 amount = amount
-            });
+            };
+
+            // Each stat's list stays in the order rows appear in the CSV, so ATK_1 comes
+            // before ATK_2 etc. as long as the sheet itself is ordered that way (yours is).
+            if (!upgradesByStat.ContainsKey(stat))
+            {
+                upgradesByStat[stat] = new List<UpgradeData>();
+                takenCountByStat[stat] = 0;
+            }
+            upgradesByStat[stat].Add(upgrade);
         }
     }
 
-    // Returns up to `count` distinct random upgrades from the full pool (no duplicates within one roll)
+    // Returns the next un-taken upgrade for this stat, or null if every tier has already been taken
+    public UpgradeData GetNextUpgrade(StatType stat)
+    {
+        if (!upgradesByStat.TryGetValue(stat, out var list)) return null;
+        int index = takenCountByStat[stat];
+        return index < list.Count ? list[index] : null;
+    }
+
+    // Call this once the player actually picks an upgrade, so the next roll offers the
+    // following tier instead of repeating or skipping ahead.
+    public void MarkUpgradeTaken(UpgradeData upgrade)
+    {
+        if (!takenCountByStat.ContainsKey(upgrade.stat)) return;
+
+        // Only advance if this really was the next upgrade in line, so re-applying the same
+        // upgrade twice (e.g. a stray double-click) can't silently skip a tier.
+        UpgradeData next = GetNextUpgrade(upgrade.stat);
+        if (next != null && next.id == upgrade.id)
+        {
+            takenCountByStat[upgrade.stat]++;
+        }
+    }
+
+    // Returns up to `count` distinct random picks, one per stat track, each being that
+    // track's *next* tier (e.g. Attack 2 once Attack 1 is taken) rather than any random row.
+    // A track that's already maxed out (all tiers taken) is excluded from the roll.
     public List<UpgradeData> GetRandomUpgrades(int count)
     {
-        List<UpgradeData> pool = new List<UpgradeData>(allUpgrades);
-        List<UpgradeData> picks = new List<UpgradeData>();
+        List<UpgradeData> available = new List<UpgradeData>();
+        foreach (StatType stat in upgradesByStat.Keys)
+        {
+            UpgradeData next = GetNextUpgrade(stat);
+            if (next != null) available.Add(next);
+        }
 
-        count = Mathf.Min(count, pool.Count);
+        count = Mathf.Min(count, available.Count);
+        List<UpgradeData> picks = new List<UpgradeData>();
         for (int i = 0; i < count; i++)
         {
-            int index = Random.Range(0, pool.Count);
-            picks.Add(pool[index]);
-            pool.RemoveAt(index);
+            int index = Random.Range(0, available.Count);
+            picks.Add(available[index]);
+            available.RemoveAt(index);
         }
 
         return picks;

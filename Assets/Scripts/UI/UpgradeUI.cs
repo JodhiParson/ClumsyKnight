@@ -82,6 +82,10 @@ public class UpgradeUI : MonoBehaviour
                 break;
         }
 
+        // Advance this stat's progression so the next roll offers the next tier, not this one again
+        if (UpgradeDatabase.Instance != null)
+            UpgradeDatabase.Instance.MarkUpgradeTaken(upgrade);
+
         Debug.Log($"Applied upgrade {upgrade.id}: {upgrade.stat} +{upgrade.amount}");
 
         CloseUpgradeUI();
