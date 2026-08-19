@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.AI.Navigation;
 
 public class DungeonCreator : MonoBehaviour
 {
@@ -68,21 +69,22 @@ public class DungeonCreator : MonoBehaviour
     //     Instantiate(wallPrefab, wallPosition, Quaternion.identity, wallParent.transform);
     // }
 
-    private void CreateWalls(GameObject wallParent)
+   private void CreateWalls(GameObject wallParent)
+{
+    foreach (var wallPosition in possibleWallHorizontalPosition)
     {
-        foreach (var wallPosition in possibleWallHorizontalPosition)
-        {
-            CreateWall(wallParent, wallPosition, wallHorizontal, Quaternion.identity);
-        }
-        foreach (var wallPosition in possibleWallVerticalPosition)
-        {
-            CreateWall(wallParent, wallPosition, wallVertical, Quaternion.Euler(0, 90, 0));
-        }
+        CreateWall(wallParent, wallPosition, wallHorizontal, Quaternion.Euler(0, 90, 0));
     }
+    foreach (var wallPosition in possibleWallVerticalPosition)
+    {
+        CreateWall(wallParent, wallPosition, wallVertical, Quaternion.Euler(0, 0, 0));
+    }
+}
 
     private void CreateWall(GameObject wallParent, Vector3Int wallPosition, GameObject wallPrefab, Quaternion rotation)
     {
         Instantiate(wallPrefab, wallPosition, rotation, wallParent.transform);
+        
     }
 
     private void CreateMesh(Vector2 bottomLeftCorner, Vector2 topRightCorner)
@@ -120,14 +122,16 @@ public class DungeonCreator : MonoBehaviour
         mesh.uv = uvs;
         mesh.triangles = triangles;
 
-        GameObject dungeonFloor = new GameObject("Mesh" + bottomLeftCorner, typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider));
+        GameObject dungeonFloor = new GameObject("Mesh" + bottomLeftCorner, typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider), typeof(NavMeshSurface));
 
+        dungeonFloor.layer = LayerMask.NameToLayer("Obstacle");
         dungeonFloor.transform.position = Vector3.zero;
         dungeonFloor.transform.localScale = Vector3.one;
         dungeonFloor.GetComponent<MeshFilter>().mesh = mesh;
         dungeonFloor.GetComponent<MeshRenderer>().material = material;
         dungeonFloor.GetComponent<MeshCollider>().sharedMesh = mesh;
         dungeonFloor.transform.parent = transform;
+        dungeonFloor.GetComponent<NavMeshSurface>().BuildNavMesh();
 
         for (int row = (int)bottomLeftV.x; row < (int)bottomRightV.x; row++)
         {
