@@ -8,7 +8,7 @@ public class EnemyHealth : MonoBehaviour
     public int currentHealth = 100;
     public int maxHealth = 100;
     public Slider enemyhealthBar;
-    public UpgradeUI upgradeUI;
+    public AugmentUI augmentUI;
 
     private void Start()
     {
@@ -33,13 +33,13 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {
-        if (UpgradeUI.Instance != null)
+        if (AugmentUI.Instance != null)
         {
-            UpgradeUI.Instance.ToggleUpgradeUI();
+            AugmentUI.Instance.ToggleAugmentUI();
         }
         else
         {
-            Debug.LogWarning("No UpgradeUI instance found in scene.");
+            Debug.LogWarning("No AugmentUI instance found in scene.");
         }
 
         Destroy(gameObject);
