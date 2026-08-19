@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Unity.AI.Navigation;
 
 public class DungeonCreator : MonoBehaviour
 {
@@ -120,14 +121,16 @@ public class DungeonCreator : MonoBehaviour
         mesh.uv = uvs;
         mesh.triangles = triangles;
 
-        GameObject dungeonFloor = new GameObject("Mesh" + bottomLeftCorner, typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider));
+        GameObject dungeonFloor = new GameObject("Mesh" + bottomLeftCorner, typeof(MeshFilter), typeof(MeshRenderer), typeof(MeshCollider), typeof(NavMeshSurface));
 
+        dungeonFloor.layer = LayerMask.NameToLayer("Obstacle");
         dungeonFloor.transform.position = Vector3.zero;
         dungeonFloor.transform.localScale = Vector3.one;
         dungeonFloor.GetComponent<MeshFilter>().mesh = mesh;
         dungeonFloor.GetComponent<MeshRenderer>().material = material;
         dungeonFloor.GetComponent<MeshCollider>().sharedMesh = mesh;
         dungeonFloor.transform.parent = transform;
+        dungeonFloor.GetComponent<NavMeshSurface>().BuildNavMesh();
 
         for (int row = (int)bottomLeftV.x; row < (int)bottomRightV.x; row++)
         {

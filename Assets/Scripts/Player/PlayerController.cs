@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    private static PlayerController instance;
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float sprintSpeed = 8f;
     [SerializeField] private float staminaDrainRate = 15f;
@@ -77,7 +78,17 @@ public class PlayerController : MonoBehaviour
         playerControls.Disable();
     }
 
-    private void Start() {
+    private void Start() 
+    {
+        if(instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
         rb = GetComponent<Rigidbody>();
         currentSpeed = walkSpeed;
     }
