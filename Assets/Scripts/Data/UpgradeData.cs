@@ -1,4 +1,4 @@
-public enum StatType { Attack, Health }
+public enum StatType { Attack, Health, Speed }
 
 [System.Serializable]
 public class UpgradeData

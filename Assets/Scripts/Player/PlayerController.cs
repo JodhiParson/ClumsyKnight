@@ -363,4 +363,9 @@ public class PlayerController : MonoBehaviour
         isAttacking = false;
         ResetCombo();
     }
+    public void ModifyMoveSpeed(float amount)
+    {
+        walkSpeed += amount;
+        sprintSpeed += amount;
+    }
 }

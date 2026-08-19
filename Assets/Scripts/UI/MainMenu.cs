@@ -1,21 +1,21 @@
 using UnityEngine;
 using System.Collections.Generic;
+using Unity.Burst.Intrinsics;
 
 public class MainMenu : MonoBehaviour
 {
     public GameObject optionsMenuUI;
-    public GameObject shopMenuUI;
     public GameObject armoryUI;
     public GameObject HUD;
 
     private List<GameObject> otherMenus;
+    public PlayerControls playerControls;
 
     void Start()
     {
-        otherMenus = new List<GameObject> { shopMenuUI }; // add any future menus here
+        otherMenus = new List<GameObject> { optionsMenuUI, armoryUI }; // add any future menus here
 
         optionsMenuUI.SetActive(false);
-        shopMenuUI.SetActive(false);
         armoryUI.SetActive(false);
         HUD.SetActive(true);
     }
@@ -32,7 +32,6 @@ public class MainMenu : MonoBehaviour
                 return;
             }
 
-            // Otherwise handle the options menu
             if (optionsMenuUI.activeSelf)
             {
                 optionsMenuUI.SetActive(false);
@@ -46,13 +45,13 @@ public class MainMenu : MonoBehaviour
                 Debug.Log("Pausing game");
             }
         }
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            OpenArmory();
+            Pause();
+        }
     }
 
-    public void OpenShopMenu()
-    {
-        shopMenuUI.SetActive(true);
-        Pause();
-    }
 
     bool CloseAnyOpenMenu()
     {
@@ -73,11 +72,15 @@ public class MainMenu : MonoBehaviour
     {
         optionsMenuUI.SetActive(true);
     }
+    public void OpenArmory()
+    {
+        armoryUI.SetActive(true);
+    }
 
     public void CloseMenu()
     {
         optionsMenuUI.SetActive(false);
-        shopMenuUI.SetActive(false);
+        armoryUI.SetActive(false);
     }
 
 

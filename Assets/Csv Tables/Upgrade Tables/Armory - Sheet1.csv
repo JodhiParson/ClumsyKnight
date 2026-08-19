@@ -1,0 +1,6 @@
+ArmorID,Name,Slot,Description,PositiveStat,PositiveAmount,NegativeStat,NegativeAmount
+HEAD_1,Iron Helmet,Head,Solid Protection though a bit heavy...,Health,25,Speed,1
+CHEST_1,Leather Vest,Chest,Light and Flexible,Speed,1,Health,10
+HANDS_1,Gauntlets,Hands,"Hits harder, slower to recover",Attack,15,Health,5
+LEGGINGS_1,Studded Greaves,Leggings,"Extra padding, extra weight",Health,15,Attack,5
+BOOTS_1,Worn Boots,Boots,"Nothing special, just sturdy",Health,10,Attack,0
