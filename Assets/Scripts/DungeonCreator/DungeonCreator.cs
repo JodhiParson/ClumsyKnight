@@ -41,6 +41,7 @@ public class DungeonCreator : MonoBehaviour
             corridorWidth);
         GameObject wallParent = new GameObject("WallParent");
         wallParent.transform.parent = transform;
+        wallParent.transform.localScale = new Vector3(1f, 10f, 1f);
         possibleDoorVerticalPosition = new List<Vector3Int>();
         possibleDoorHorizontalPosition = new List<Vector3Int>();
         possibleWallHorizontalPosition = new List<Vector3Int>();
