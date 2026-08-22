@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Unity.AI.Navigation;
+using UnityEngine.LowLevelPhysics;
 
 public class DungeonCreator : MonoBehaviour
 {
@@ -40,7 +40,9 @@ public class DungeonCreator : MonoBehaviour
             roomOffset,
             corridorWidth);
         GameObject wallParent = new GameObject("WallParent");
+        wallParent.layer = LayerMask.NameToLayer("Obstacle");
         wallParent.transform.parent = transform;
+        wallParent.transform.localScale = new Vector3(1f, 10f, 1f);
         possibleDoorVerticalPosition = new List<Vector3Int>();
         possibleDoorHorizontalPosition = new List<Vector3Int>();
         possibleWallHorizontalPosition = new List<Vector3Int>();
@@ -73,17 +75,28 @@ public class DungeonCreator : MonoBehaviour
     {
         foreach (var wallPosition in possibleWallHorizontalPosition)
         {
-            CreateWall(wallParent, wallPosition, wallHorizontal, Quaternion.identity);
+            CreateWall(wallParent, wallPosition, wallHorizontal, Quaternion.Euler(0, 90, 0));
         }
         foreach (var wallPosition in possibleWallVerticalPosition)
         {
-            CreateWall(wallParent, wallPosition, wallVertical, Quaternion.Euler(0, 90, 0));
+            CreateWall(wallParent, wallPosition, wallVertical, Quaternion.Euler(0, 0, 0));
         }
     }
 
     private void CreateWall(GameObject wallParent, Vector3Int wallPosition, GameObject wallPrefab, Quaternion rotation)
     {
-        Instantiate(wallPrefab, wallPosition, rotation, wallParent.transform);
+        GameObject wall = Instantiate(wallPrefab, wallPosition, rotation, wallParent.transform);
+        wall.layer = LayerMask.NameToLayer("Obstacle");
+
+        // Force convex + contact point generation on every collider on the wall (root and any
+        // children), so collisions with dynamic rigidbodies actually produce contacts.
+        foreach (Collider col in wall.GetComponentsInChildren<Collider>())
+        {
+            col.providesContacts = true;
+
+            if (col is MeshCollider meshCollider)
+                meshCollider.convex = true;
+        }
     }
 
     private void CreateMesh(Vector2 bottomLeftCorner, Vector2 topRightCorner)
