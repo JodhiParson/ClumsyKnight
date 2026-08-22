@@ -83,21 +83,26 @@ public class DungeonCreator : MonoBehaviour
         }
     }
 
-    private void CreateWall(GameObject wallParent, Vector3Int wallPosition, GameObject wallPrefab, Quaternion rotation)
+private void CreateWall(GameObject wallParent, Vector3Int wallPosition, GameObject wallPrefab, Quaternion rotation)
+{
+    GameObject wall = Instantiate(wallPrefab, wallPosition, rotation, wallParent.transform);
+    wall.layer = LayerMask.NameToLayer("Obstacle");
+
+    Renderer wallRenderer = wall.GetComponentInChildren<Renderer>();
+    if (wallRenderer != null)
     {
-        GameObject wall = Instantiate(wallPrefab, wallPosition, rotation, wallParent.transform);
-        wall.layer = LayerMask.NameToLayer("Obstacle");
-
-        // Force convex + contact point generation on every collider on the wall (root and any
-        // children), so collisions with dynamic rigidbodies actually produce contacts.
-        foreach (Collider col in wall.GetComponentsInChildren<Collider>())
-        {
-            col.providesContacts = true;
-
-            if (col is MeshCollider meshCollider)
-                meshCollider.convex = true;
-        }
+        float currentBottomY = wallRenderer.bounds.min.y;
+        float targetBottomY = wallPosition.y;
+        wall.transform.position += Vector3.up * (targetBottomY - currentBottomY);
     }
+
+    foreach (Collider col in wall.GetComponentsInChildren<Collider>())
+    {
+        col.providesContacts = true;
+        if (col is MeshCollider meshCollider)
+            meshCollider.convex = true;
+    }
+}
 
     private void CreateMesh(Vector2 bottomLeftCorner, Vector2 topRightCorner)
     {
