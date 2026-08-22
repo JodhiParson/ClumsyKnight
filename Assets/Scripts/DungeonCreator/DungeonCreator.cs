@@ -40,7 +40,6 @@ public class DungeonCreator : MonoBehaviour
             roomOffset,
             corridorWidth);
         GameObject wallParent = new GameObject("WallParent");
-        wallParent.layer = LayerMask.NameToLayer("Obstacle");
         wallParent.transform.parent = transform;
         wallParent.transform.localScale = new Vector3(1f, 10f, 1f);
         possibleDoorVerticalPosition = new List<Vector3Int>();
@@ -86,7 +85,6 @@ public class DungeonCreator : MonoBehaviour
 private void CreateWall(GameObject wallParent, Vector3Int wallPosition, GameObject wallPrefab, Quaternion rotation)
 {
     GameObject wall = Instantiate(wallPrefab, wallPosition, rotation, wallParent.transform);
-    wall.layer = LayerMask.NameToLayer("Obstacle");
 
     Renderer wallRenderer = wall.GetComponentInChildren<Renderer>();
     if (wallRenderer != null)
