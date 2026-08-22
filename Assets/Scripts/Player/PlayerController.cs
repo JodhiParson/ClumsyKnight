@@ -1,10 +1,9 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
     private static PlayerController instance;
+    private Transform cameraMainTransform;
     [SerializeField] private float walkSpeed = 5f;
     [SerializeField] private float sprintSpeed = 8f;
     [SerializeField] private float staminaDrainRate = 15f;
@@ -62,6 +61,10 @@ public class PlayerController : MonoBehaviour
     private bool isTripping = false;
     private float tripTimer = 0f;
 
+    // Tracks the last direction the player was actually moving in (camera-relative, world space),
+    // so things like the weapon throw can aim at "where the player is facing" even after input stops
+    private Vector3 lastFacingDirection = Vector3.forward;
+
     // Read-only state exposed for other scripts (e.g. ClumsyEvents)
     public bool IsMoving => movement.sqrMagnitude > 0f;
     public bool IsTripping => isTripping;
@@ -91,6 +94,7 @@ public class PlayerController : MonoBehaviour
         }
         rb = GetComponent<Rigidbody>();
         currentSpeed = walkSpeed;
+        cameraMainTransform = Camera.main.transform;
     }
 
     void Update()
@@ -105,6 +109,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             movement = new Vector3(x, 0, z).normalized;
+            movement = cameraMainTransform.forward * movement.z + cameraMainTransform.right * movement.x;
+            movement.y = 0f;
+
+            if (movement.sqrMagnitude > 0.01f)
+                lastFacingDirection = movement.normalized; // remember facing even after input stops
 
             if (Mathf.Abs(x) > 0.01f)
             {
@@ -249,14 +258,17 @@ public class PlayerController : MonoBehaviour
         isRolling = true;
         rollTimer = rollDuration;
 
-        // Roll in whatever direction the player is currently moving;
-        // fall back to facing direction if standing still
-        Vector3 xDir = playerControls.Player.Move.ReadValue<Vector2>().x * Vector3.right;
-        Vector3 zDir = playerControls.Player.Move.ReadValue<Vector2>().y * Vector3.forward;
-        Vector3 inputDir = (xDir + zDir).normalized;
+        float x = playerControls.Player.Move.ReadValue<Vector2>().x;
+        float z = playerControls.Player.Move.ReadValue<Vector2>().y;
+        Vector3 inputDir = new Vector3(x, 0, z).normalized;
 
-        rollDirection = inputDir.sqrMagnitude > 0.01f
-            ? inputDir
+        // Same camera-relative transform used for movement in Update(), so rolling
+        // "forward" means forward relative to the camera, not world space forward
+        Vector3 camRelativeDir = cameraMainTransform.forward * inputDir.z + cameraMainTransform.right * inputDir.x;
+        camRelativeDir.y = 0f;
+
+        rollDirection = camRelativeDir.sqrMagnitude > 0.01f
+            ? camRelativeDir.normalized
             : new Vector3(Mathf.Sign(visualTransform.localScale.x), 0, 0);
 
         stamina.Drain(rollStaminaCost);
@@ -338,8 +350,8 @@ public class PlayerController : MonoBehaviour
             weaponRb.isKinematic = false;
             weaponRb.useGravity = true;
 
-            Vector3 facing = new Vector3(Mathf.Sign(visualTransform.localScale.x), 0f, 0f);
-            Vector3 throwDirection = (facing + Vector3.up * weaponThrowUpwardArc).normalized;
+            // Throw toward wherever the player was last actually moving, rather than just left/right
+            Vector3 throwDirection = (lastFacingDirection + Vector3.up * weaponThrowUpwardArc).normalized;
 
             weaponRb.AddForce(throwDirection * weaponThrowForce, ForceMode.Impulse);
             weaponRb.AddTorque(Vector3.forward * weaponSpinTorque, ForceMode.Impulse);

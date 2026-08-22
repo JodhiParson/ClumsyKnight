@@ -99,7 +99,7 @@ MonoBehaviour:
     negativeStat: 0
     negativeAmount: 0
     icon: {fileID: 0}
-  iconImage: {fileID: 0}
+  iconImage: {fileID: 2114541072279109597}
 --- !u!225 &2449846030436781961
 CanvasGroup:
   m_ObjectHideFlags: 0
